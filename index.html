@@ -59,8 +59,12 @@
       <div class="card" id="game-page" hidden>
         <div class="item-container"></div>
         <div class="item-footer">
-          <button class="wrong" type="button">Wrong</button>
-          <button class="right" type="button">Right</button>
+          <button class="wrong" onclick="select(false)" type="button">
+            Wrong
+          </button>
+          <button class="right" onclick="select(true)" type="button">
+            Right
+          </button>
         </div>
       </div>
       <div class="card" id="score-page" hidden>
