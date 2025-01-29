@@ -12,6 +12,7 @@ const finalTimeEl = document.querySelector(".final-time");
 const baseTimeEl = document.querySelector(".base-time");
 const penaltyTimeEl = document.querySelector(".penalty-time");
 const playAgainBtn = document.querySelector(".play-again");
+const socialButtons = document.querySelector(".social-buttons");
 
 let questionAmount = 0;
 let equationsArray = [];
@@ -75,9 +76,11 @@ function playAgain() {
   playerGuessArray = [];
   valueY = 0;
   playAgainBtn.hidden = true;
+  socialButtons.style.display = "flex";
 }
 
 function showScorePage() {
+  socialButtons.style.display = "none";
   setTimeout(() => {
     playAgainBtn.hidden = false;
   }, 1000);
@@ -205,6 +208,8 @@ function countdownStart() {
 }
 
 function showCountdown() {
+  socialButtons.style.display = "none";
+
   countdownPage.hidden = false;
   splashPage.hidden = true;
   countdownStart();
